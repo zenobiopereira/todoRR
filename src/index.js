@@ -4,6 +4,7 @@ import {Provider} from "react-redux";
 import {createStore} from "redux";
 import todosReducer from "./reducers/index";
 import App from "./components/App";
+import './stylesheets/styles.scss';
 import {loadState, saveState} from './reducers/localStorage.js'
 const persistedState =  loadState();
 const StoreInstance = createStore(

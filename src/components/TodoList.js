@@ -1,9 +1,10 @@
-import React from 'react'
+import React, {Fragment} from 'react'
 import PropTypes from 'prop-types'
 import Todo from './Todo'
 
 const TodoList = ({ todos, toggleTodo}) => (
-  <ul>
+  <Fragment>
+  <ul className = "ulFk">
     {todos.map(todo =>
       <Todo
         key={todo.id}
@@ -12,6 +13,7 @@ const TodoList = ({ todos, toggleTodo}) => (
       />
     )}
   </ul>
+  </Fragment>
 )
 
 TodoList.propTypes = {

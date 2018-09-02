@@ -7,16 +7,17 @@ import DeleteTodo from '../containers/DeleteTodo'
  to receive when called at line 17 */
 const Todo = ({ onClick, completed, text, id}) => (
   <Fragment>
-  <li
+  <li>
+    <div className="textTodo"     
     style={{
-      textDecoration: completed ? 'line-through' : 'none',
-      color: completed ? 'red' : 'black',
+      backgroundColor: completed ? 'aquamarine' : '#ffeb7a',
       cursor : 'pointer'
-    }}
-  >
-    <p style={{width: '300px' , backgroundColor: 'grey'}} onClick={onClick}>{text}</p>
+    }} onClick={onClick}>{text}</div>
   </li>
     <DeleteTodo id={id} completed={completed}/>
+    {/* <span style={{
+      color: completed ? 'Black' : 'transparent',
+    }}><b> Good Job, now jump to the next one. </b></span> */}
     </Fragment>
 )
 

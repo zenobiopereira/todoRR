@@ -17,9 +17,11 @@ const AddTodo = ({ dispatch }) => {
           input.value = ''
         }}
       >
-        <input maxLength="180" rows="5" placeholder="Need me to remember you something? You have 180 caracteres, Go on" ref={node => input = node} />
+        <input 
+        maxLength="300"
+         rows="5" placeholder="Need me to remember you something? Max 300 characteres" ref={node => input = node} />
         <button type="submit">
-          Add Todo
+          Create Todo
         </button>
       </form>
     </div>

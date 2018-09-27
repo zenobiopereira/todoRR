@@ -5,7 +5,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server --mode development --config config/webpack.dev.config.js --open --hot",
+    "start": "webpack-dev-server --mode development --config config/webpack.dev.config.js --hot --host 192.168.0.12 --port 3001 --open",
     "build": "webpack --mode production --config config/webpack.prod.config.js --env.NODE_ENV=production --progress"
   },
   "devDependencies": {
@@ -29,6 +29,7 @@
     "node-sass": "^4.9.2",
     "optimize-css-assets-webpack-plugin": "^5.0.0",
     "react-redux": "^5.0.7",
+    "react-svg-loader": "^2.1.0",
     "redux": "^4.0.0",
     "sass-loader": "^7.0.3",
     "style-loader": "^0.21.0",

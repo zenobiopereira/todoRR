@@ -102,7 +102,6 @@ body{
     background-size: 100% 90%;
     background-position: -10px -10px;
     background-repeat: no-repeat;
-
     p {
         text-align: left;
         margin: 50px 15px 15px 15px;
@@ -140,7 +139,7 @@ body{
 
     .btn-Del{
         width: 50vw;
-        // margin-top: 8vh;
+        margin-top: 5vh;
         background-color: rgb(67, 221, 126);
         border-color: rgb(67, 221, 126);
         box-shadow: 1px 1px rgb(67, 221, 126);
@@ -149,12 +148,12 @@ body{
 
     .textTodo{
         width: 80vw;
-        height: 50vh;
+        height: 60vh;
         margin-left: 50px;
         p{
             margin: 25px 15px 15px 25px;
             width: 60vw;
-            height: 35vh;
+            height: 40vh;
             max-width: 80vw;
             text-overflow: clip;
         }

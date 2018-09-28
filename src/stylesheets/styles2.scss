@@ -21,9 +21,9 @@ html{
 }
 
 body{
-    background-color: black;
     background-image: url(../images/board-close-up-coffee.jpg);
-    background-size: cover;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 .fullApp{
@@ -35,9 +35,10 @@ body{
     display: flex;
     flex-grow: 1;
     overflow-y: scroll;
+    overflow-x: visible;
     max-width: 96vw;
+    height: 50vh;
     margin: 0 auto;
-    padding: 20px;
 }
 
 .ulFk{
@@ -46,7 +47,8 @@ body{
     flex-flow: row nowrap;
     align-items: stretch;
     padding: 0;
-    overflow: visible;
+    overflow-x: visible;
+    overflow-y: scroll;
 }
 
 
@@ -99,7 +101,7 @@ body{
 
 
 .textTodo{
-    margin-left: 25px;
+    margin-left: 27px;
     margin-top: 20px;
     height: 40vh;
     width: $width-pattern;
@@ -147,7 +149,11 @@ body{
 }
 
 
-@media only screen and (max-width: 1080px) {
+@media only screen and (max-width: 800px) {
+
+    html{
+        height: 130%;
+    }
 
     .btn-Del{
         width: 50vw;
@@ -159,9 +165,9 @@ body{
     }
 
     .textTodo{
-        width: 80vw;
+        width: 70vw;
         height: 60vh;
-        margin-left: 50px;
+        margin-left: 20px;
         p{
             margin: 25px 15px 15px 25px;
             width: 60vw;
@@ -181,5 +187,15 @@ body{
             height: 10vh;
             width: 88vw;
         }
+    }
+
+    .visibleList{
+        overflow: scroll;
+        height: 110%;
+        width: 80vw;
+    }
+
+    .ulFk{
+        overflow: visible;
     }
 }

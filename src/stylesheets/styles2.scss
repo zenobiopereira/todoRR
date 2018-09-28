@@ -1,12 +1,7 @@
-$height-pattern: 3vh;
-$width-pattern: 30vw;
+$height-pattern: 30px;
+$width-pattern: 400px;
 
 // Needed to the sake of a responsive background Image.
-html{
-    width: 100%;
-    height: 100%;
-}
-
 ::-webkit-scrollbar { 
     display: none; 
 }
@@ -23,7 +18,7 @@ html{
 body{
     background-color: black;
     background-image: url(../images/board.jpg);
-    background-size: contain;
+    background-size: cover;
 }
 
 .fullApp{
@@ -36,8 +31,8 @@ body{
     flex-grow: 1;
     overflow-x: scroll;
     max-width: 96vw;
-    margin: 0 auto;
     padding: 20px;
+    flex-direction: flex-start;
 }
 
 .ulFk{
@@ -52,10 +47,10 @@ body{
 
 .inputAdd{
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
 
     input{
-        width: $width-pattern;
         height: $height-pattern;
         border-radius: 15px;
         width: $width-pattern;
@@ -72,7 +67,7 @@ body{
         cursor: pointer;
         display: block;
         margin: 0 auto;
-        width: 29.90vw;
+        width: $width-pattern;
         background-color: #2ecc71;
         border-radius: 15px;
         height: 33px;
@@ -95,17 +90,36 @@ body{
 
 
 .textTodo{
-    margin-left: 25px;
+    margin-left: 20px;
     margin-top: 20px;
     height: 40vh;
-    width: $width-pattern;
+    width: $width-pattern - 5;
     background-color: #ffc;
     transform: rotate(5deg);
     background-size: 100% 90%;
     background-position: -10px -10px;
     background-repeat: no-repeat;
-    box-shadow: 5px 5px 15px #000;
+    box-shadow: -6px 15px 15px #000;
     transition: transform 0.2s ease-in-out;
+    overflow: hidden;
+    -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0);
+  clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 17%, 87% 0);
+    // css hack to make folding paper effect
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      border-width: 0 50px 50px 0;
+      border-style: solid;
+      border-color: darken(#ffc, 20%) transparent;
+      overflow: hidden;
+      box-shadow: 0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+    }
+    
+    &:first-child{
+     margin-left:0;
+    }
     &:hover{
         transform: rotate(0deg);
     }

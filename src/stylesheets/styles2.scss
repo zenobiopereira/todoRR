@@ -22,8 +22,8 @@ html{
 
 body{
     background-color: black;
-    background-image: url(../images/board-close-up-coffee.jpg);
-    background-size: cover;
+    background-image: url(../images/board.jpg);
+    background-size: contain;
 }
 
 .fullApp{
@@ -34,7 +34,7 @@ body{
 .visibleList{
     display: flex;
     flex-grow: 1;
-    overflow-y: scroll;
+    overflow-x: scroll;
     max-width: 96vw;
     margin: 0 auto;
     padding: 20px;
@@ -73,25 +73,21 @@ body{
         display: block;
         margin: 0 auto;
         width: 29.90vw;
-        background-color: rgb(67, 221, 126);
+        background-color: #2ecc71;
         border-radius: 15px;
-        height: 40px;
+        height: 33px;
         border: none;
-        border-bottom: 4px solid darken(rgb(67, 221, 126), 20%);
-        transition: transform 0.10s linear;
+        transition: background-color 0.10s linear;
         margin-top: 10px;
-        color: #000;
+        color: #fff;
         font-weight: bold;
 
         &:focus {
             outline: none;
         }
         &:hover {
-            border-style: solid;
-            border-color: aquamarine;
             border: none;
-            background-color: darken(rgb(67, 221, 126), 20%);
-            transform: translateY(1px);
+            background-color: darken(#2ecc71, 8%);
 
         }
     }
@@ -108,7 +104,7 @@ body{
     background-size: 100% 90%;
     background-position: -10px -10px;
     background-repeat: no-repeat;
-    box-shadow: 5px 5px 7px #999;
+    box-shadow: 5px 5px 15px #000;
     transition: transform 0.2s ease-in-out;
     &:hover{
         transform: rotate(0deg);
@@ -127,7 +123,8 @@ body{
 .btn-Del{
     margin: 0 auto;
     width: 10vw;
-    border-radius: 0px 0px 3px 3px;
+    margin-left: 15px;
+    border-radius: 3px;
     background-color: rgb(254, 231, 60);
     box-shadow: 1px 1px rgb(254, 231, 60);
     border-style: solid;

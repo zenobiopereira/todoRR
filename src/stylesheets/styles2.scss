@@ -41,7 +41,6 @@ body{
 
 .ulFk{
     display: flex;
-    flex-wrap: wrap;
     flex-shrink: 0;
     flex-flow: row nowrap;
     align-items: stretch;
@@ -107,6 +106,7 @@ body{
         margin: 50px 15px 15px 15px;
         width: 25vw;
         height: 25vh;
+        max-width: 25vw;
         overflow: scroll;
     }
 

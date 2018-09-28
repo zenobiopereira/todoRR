@@ -15,7 +15,7 @@ const Todo = ({ onClick, completed, text, id}) => (
       // borderColor: completed ? 'aquamarine': '#e6e6e6',
       cursor : 'pointer'
     }} 
-    ><p  onClick={onClick}>{text}</p>
+    ><p onClick={onClick}>{text}</p>
   {/* </li> */}
     <DeleteTodo id={id} completed={completed}/>
     </div>

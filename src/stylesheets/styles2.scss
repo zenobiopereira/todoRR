@@ -34,9 +34,10 @@ body{
 .visibleList{
     display: flex;
     flex-grow: 1;
-    overflow: scroll;
+    overflow-y: scroll;
     max-width: 96vw;
     margin: 0 auto;
+    padding: 20px;
 }
 
 .ulFk{
@@ -45,6 +46,7 @@ body{
     flex-flow: row nowrap;
     align-items: stretch;
     padding: 0;
+    overflow: visible;
 }
 
 
@@ -55,10 +57,10 @@ body{
     input{
         width: $width-pattern;
         height: $height-pattern;
-        border-top-right-radius: 8px;
-        border-top-left-radius: 8px;
+        border-radius: 15px;
         width: $width-pattern;
         text-align: center;
+        height: 30px;
         border: none;
         background-color: #ffffff;
         &:focus{
@@ -71,22 +73,26 @@ body{
         display: block;
         margin: 0 auto;
         width: 29.90vw;
-        border-bottom-right-radius: 25px;
-        border-bottom-left-radius: 25px;
         background-color: rgb(67, 221, 126);
-        size: 20px;
-        box-shadow: 1px 1px rgb(67, 221, 126);
-        border-style: solid;
-        border-color: rgb(67, 221, 126);
+        border-radius: 15px;
+        height: 40px;
+        border: none;
+        border-bottom: 4px solid darken(rgb(67, 221, 126), 20%);
+        transition: transform 0.10s linear;
+        margin-top: 10px;
+        color: #000;
+        font-weight: bold;
 
         &:focus {
             outline: none;
         }
         &:hover {
-            background-color: aquamarine;
-            box-shadow: 1px 1px aquamarine;
             border-style: solid;
             border-color: aquamarine;
+            border: none;
+            background-color: darken(rgb(67, 221, 126), 20%);
+            transform: translateY(1px);
+
         }
     }
 }
@@ -97,10 +103,16 @@ body{
     margin-top: 20px;
     height: 40vh;
     width: $width-pattern;
-    background-image: url('../images/sticky-note.png');
+    background-color: #ffc;
+    transform: rotate(5deg);
     background-size: 100% 90%;
     background-position: -10px -10px;
     background-repeat: no-repeat;
+    box-shadow: 5px 5px 7px #999;
+    transition: transform 0.2s ease-in-out;
+    &:hover{
+        transform: rotate(0deg);
+    }
     p {
         text-align: left;
         margin: 50px 15px 15px 15px;
